@@ -1,10 +1,12 @@
 # TRS-80 Model 1 - Power Supply
 
-This project is a reimplementation of the TRS-80 Model 1 Power Supply that replicates the DC and AC voltages needed to run the original system. This revision is based on [previous work](https://github.com/maboytim/TRS-80_Model1_Power_Supply) by Matt Boytim. It is a slight modification from that design. The entire project is available under the MIT license while the reference project has been released as Public Domain.
+This project is a reimplementation of the TRS-80 Model 1 Power Supply that replicates the DC and AC voltages needed to run the original system. This revision is based on [previous work](https://github.com/maboytim/TRS-80_Model1_Power_Supply) by Matt Boytim, with slight modifications to that design. The entire project is available under the MIT license, while the reference project has been released into the Public Domain.
 
-**NOTE**: There has been a previous pwoer supply by RetroStack. This new version replaces that power supply as it is cheaper to produce, lighter, and smaller.
+This version supports both 120V and 230V.
 
-**WARNING**: Since this project works with high voltages, please only do this if you know what you are doing. Working on high voltages can kill you! Additionally, doing things incorrectly could burn down your house.
+**NOTE**: A previous power supply was released by RetroStack. This new version replaces that power supply as it is cheaper to produce, lighter, and smaller.
+
+**WARNING**: This project works with high voltages. Please proceed only if you are experienced with handling high-voltage electronics. Working on high voltages can be fatal and, if done incorrectly, could cause a fire or damage to property.
 
 ![E1 Replica](/Latest/Photo.png)
 
