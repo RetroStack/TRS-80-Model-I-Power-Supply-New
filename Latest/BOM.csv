@@ -1,0 +1,4 @@
+Reference,Qty,Value,Footprint
+"C1,C2",2,2200u,Capacitor_THT:CP_Radial_D12.5mm_P5.00mm
+D1,1,B40C800G,Diode_THT:Diode_Bridge_Round_D9.8mm
+T1,1,DST-6-16,M1PSX3:XFMR_DST-6-16
