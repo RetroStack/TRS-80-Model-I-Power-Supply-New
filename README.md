@@ -4,9 +4,12 @@ This project is a reimplementation of the TRS-80 Model 1 Power Supply that repli
 
 This version supports both 120V and 230V.
 
-**NOTE**: A previous power supply was released by RetroStack. This new version replaces that power supply as it is cheaper to produce, lighter, and smaller.
+**NOTE**: A [previous power supply](https://github.com/RetroStack/TRS-80-Model-I-Power-Supply) was released by RetroStack. This new version replaces that power supply as it is cheaper to produce, lighter, and smaller.
 
-**WARNING**: This project works with high voltages. Please proceed only if you are experienced with handling high-voltage electronics. Working on high voltages can be fatal and, if done incorrectly, could cause a fire or damage to property.
+**WARNING**: This project involves high voltages that can cause severe injury, death, or property damage. Only proceed if you have the necessary experience and knowledge in handling high-voltage electronics.
+- **Safety First**: Always unplug the device and ensure it is fully discharged before beginning any work. Capacitors can store a significant amount of energy. Use insulated tools and wear appropriate safety gear, such as rubber gloves and safety glasses.
+- **Risk of Fire and Shock**: Incorrect wiring or assembly can lead to electric shock, fire, or malfunction. Double-check all connections, and if you're unsure, consult a qualified electrician or engineer. As this is a hobby device, never leave it connected without supervision.
+- **Use at Your Own Risk**: The creator of this project is not liable for any damage, injury, or harm caused by the misuse of these instructions. Proceed with extreme caution and at your own risk.
 
 ![E1 Replica](/Images/Photo.png)
 
