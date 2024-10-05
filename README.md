@@ -8,7 +8,7 @@ This version supports both 120V and 230V.
 
 **WARNING**: This project works with high voltages. Please proceed only if you are experienced with handling high-voltage electronics. Working on high voltages can be fatal and, if done incorrectly, could cause a fire or damage to property.
 
-![E1 Replica](/Latest/Photo.png)
+![E1 Replica](/Images/Photo.png)
 
 ## Project Details
 
@@ -23,58 +23,78 @@ In the "Latest" folder, you'll find the most up-to-date design files, including:
 
 ### Bill of Materials (BOM)
 
-| Reference | Qty | Value    | Footprint                               |
-| --------- | --- | -------- | --------------------------------------- |
-| C1,C2     | 2   | 2200u    | Capacitor_THT:CP_Radial_D12.5mm_P5.00mm |
-| D1        | 1   | B40C800G | Diode_THT:Diode_Bridge_Round_D9.8mm     |
-| T1        | 1   | DST-6-16 | M1PSX3:XFMR_DST-6-16                    |
+| Reference | Qty | Value      | Footprint                                                   |
+| --------- | --- | ---------- | ----------------------------------------------------------- |
+| C1,C2     | 2   | 2200u      | Capacitor_THT:CP_Radial_D12.5mm_P5.00mm                     |
+| D1        | 1   | B40C800G   | Diode_THT:Diode_Bridge_Round_D9.8mm                         |
+| T1        | 1   |            | ST-6-16 (110V) or DST-6-16 (220V)                           |
+| -         | 1   | Power Unit | With Fuse, Switch and C8 connector                          |
+| -         | 1   | Case       | Top                                                         |
+| -         | 1   | Case       | Bottom                                                      |
+| -         | 2   | M3         | Screw; 40mm length or longer (for Transformer); Sunken Head |
+| -         | 2   | M3         | Nut (for Transformer)                                       |
+| -         | 4   | M3         | Screw; 10mm length (for Case); Sunken Head                  |
+| -         | 2   | M3         | Screw; 6mm length (for power unit); Black                   |
+| -         | 1   | 6N-4       | Strain Relief                                               |
+| -         | 1   | Cable      | 4 or 5-wires (5 preferred); ~50cm length                    |
+| -         | 1   | DIN-5      | Connector                                                   |
+| -         | 1   | Zip-Tie    | To improve strain relief                                    |
+| -         | 1   | Fuse       | 1.5A 250V; 6x30mm Glass Fuse; Fast Blow                     |
+| -         | -   | Wire       | AWG 20 (or lower) for power connection                      |
 
 ### Assembly
 
 **Prepare Case**
 
-1. 3D print case (lid and base) or order from manufacturer.
-2. (a) If 3D printed with PLA and similar, use a soldering iron to set the knurled nuts. You can buy a set of tools to simplify this, but a soldering iron is enough.
-3. (b) If 3D printed with resin, drill out a bit more space on all the 6 places and set the knurled nuts with super glue. Make sure to not cover the threads as it would give you trouble later to screw things in. Wait for it to get really solid before moving on.
+1.  3D print the case (lid and base) or order it from a manufacturer.
+2.  a. If 3D printed with PLA or similar material, use a soldering iron to set the knurled nuts. You can purchase a set of tools to simplify this, but a soldering iron is sufficient.
 
-![3D Case](/Images/3DPrint_Model.png)
+    b. If 3D printed with resin, drill out a bit more space at all six locations and set the knurled nuts with super glue. Be careful not to cover the threads, as this will cause problems when screwing things in later. Wait until the glue is fully set before moving on.
 
-4. Paint the lettering on the top. I was able to do this nicely with a foam brush. Optionally add a clear coat to protect the paint from rubbing off.
-5. Screw in the transformer with the M4 screws.
+![3D Case](/Images/3DPrint_Top.png)
+
+4. Paint the lettering on the top. I achieved good results using a foam brush or Q-tip. Optionally, apply a clear coat to protect the paint from wearing off.
 
 **Electronics**
 
-1. Crimp two short wires to add a jumper between the neutral to the switch and another from the fuse to the switch. One side of the switch will be the terminals of the light (you can often see the leads for the lightbulb). You want the one side not for the light so the light only turns on when switch is turned on. You can swap them around later if you find it isn't correct. For the wire, I used AWG 26.
+1. Solder in the transformer. Match the numbers written on the terminals to the numbers on the PCB. If you're using the ST-6-16, terminals 2 and 3 will be missing, which is fine. These are only used for the DST-6-16.
+2. Solder in the two capacitors. They are polarized, so ensure the negatively marked sides match the PCB silkscreen.
+3. Solder in the rectifier, aligning the direction with the PCB silkscreen.
+4. Solder a 5-wire cable to the secondary side of the transformer, between the capacitors. Ideally, match a red wire to the center (~20V DC), a green/yellow wire to the outer AC connections, and a black/white wire to the two positions adjacent to the center (for ground). Matching colors or jotting down the wire colors will help you later when soldering the DIN-5 connector. You can also use a 4-wire cable, but in that case, choose only one ground pad instead of both.
+5. _(Optional)_ Add a cable tie around the cable for extra strain relief.
 
-![Power Unit](/Images/Power_Unit.png)
+![Open](/Images/Open.png)
 
-2. Crimp two more wires on one side, each connecting to ther other side of the switch and carrying the 110V AC. For the wire, I used AWG 26.
-3. Solder the last two wires into place on the side of the transformer with only two terminals. This is the primary side.
-4. Solder 6 wires to the secondary side of the transformer. Make sure that each wire can reach to the PCB area.
-5. Add the two diodes on the PCB. Make sure to put them into the correct direction as indicated on the PCB and the line on the diodes. Both diodes are oriented in the same direction.
-6. Solder all 6 wires to the PCB sequentially as shown. First, SA# are the top 3 terminals from left to right. Second, SB# are the bottom 3 terminals from left to right.
+6. Crimp two short wires to create jumpers: one between the terminal and the switch, and another from the fuse to the switch. Connect the first wire (from the connector, not the fuse) to the switch's common terminal, which is usually marked with a different color. One side of the switch will be for the light (you can typically see the lightbulb leads). Use the opposite side so the light turns on only when the switch is activated. If it's incorrect, you can swap them later. I used AWG 20 wire for this.
+7. Crimp two more wires on one side, each connecting to the other side of the switch and carrying the 110V/220V AC. I used AWG 20 wire. Depending on your power unit (see below), different connections may be required.
 
-![PCB](/Images/PCB_Overview.png)
+![Power Unit](/Images/Power_Unit2.png)
 
-7. Solder the two AC wires (marked "~") from the cable going to the computer. Confirm that these are the right wires with the graphic shown below.
-8. Solder the two other wires (marked "+" and "-") from the cable going to the computer. Confirm that these are the right wires with the graphic shown below.
+**NOTE:** There are different configurations for the power unit. Here’s another setup I've used in the past:
+
+![Power Unit](/Images/Power_Unit1.png)
+
+8. Solder the last two wires into place on one side of the PCB (the primary side). Leave them disconnected from the power unit for now.
+9. Screw in the transformer and PCB using long M4 screws and nuts.
+10. Screw in the power unit. First, pull out the two crimped cables and connect them to the remaining terminals on the power unit before screwing it in.
+11. Assemble the case using the smaller M3 screws.
+12. Add the plastic grommet for strain relief.
+
+![Strain Relief Open](/Images/Strain_Relief1.png)
+![Strain Relief Closed](/Images/Strain_Relief2.png)
+
+13. Solder the DIN-5 connector according to this diagram:
 
 ![PCB](/Images/DIN-5_Connector.png)
 
-9. (optional) Add some glue to add some kind of strain relief on the wires themselves.
-10. (optional) Add a cable-tie around the cable to add an additional way of strain relief.
-11. Finally, add the plastic grommet which is used as the main method of strain relief.
-12. Screw in PCB
-13. Screw in Power Unit
-14. Screw the lid to the top
-15. Add fuse to the fuse holder
+14. Insert the fuse into the fuse holder.
 
 ### Implementation
 
 The project has been implemented using KiCAD 8. The KiCAD project files are included in this repository.
 
-![Front](/Latest/3D_Front.png)
-![Back](/Latest/3D_Back.png)
+![Front](/Images/3D_Front.png)
+![Back](/Images/3D_Back.png)
 
 ### RetroStack Libraries
 
