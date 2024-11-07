@@ -9,8 +9,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "TRS-80 Model 1 Power Supply")
-		(date "2024-08-24")
-		(rev "Rev 1.2")
+		(date "2024-11-06")
+		(rev "Rev 1.3")
 		(company "RetroStack LLC (based on design by Matt Boytim)")
 	)
 	(layers
@@ -90,7 +90,7 @@
 			(layerselection 0x00010fc_ffffffff)
 			(plot_on_all_layers_selection 0x0000000_00000000)
 			(disableapertmacros no)
-			(usegerberextensions yes)
+			(usegerberextensions no)
 			(usegerberattributes no)
 			(usegerberadvancedattributes no)
 			(creategerberjobfile no)
@@ -121,7 +121,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "JLCPCB")
+			(outputdirectory "PCBWay")
 		)
 	)
 	(net 0 "")
