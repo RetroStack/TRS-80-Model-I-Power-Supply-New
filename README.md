@@ -26,24 +26,24 @@ In the "Latest" folder, you'll find the most up-to-date design files, including:
 
 ### Bill of Materials (BOM)
 
-| Reference | Qty | Value      | Footprint                                                   |
-| --------- | --- | ---------- | ----------------------------------------------------------- |
-| C1,C2     | 2   | 2200u      | Capacitor_THT:CP_Radial_D12.5mm_P5.00mm                     |
-| D1        | 1   | B40C800G   | Diode_THT:Diode_Bridge_Round_D9.8mm                         |
-| T1        | 1   |            | ST-6-16 (110V) or DST-6-16 (220V)                           |
-| -         | 1   | Power Unit | With Fuse, Switch and C8 connector                          |
-| -         | 1   | Case       | Top                                                         |
-| -         | 1   | Case       | Bottom                                                      |
-| -         | 2   | M3         | Screw; 40mm length or longer (for Transformer); Sunken Head |
-| -         | 2   | M3         | Nut (for Transformer)                                       |
-| -         | 4   | M3         | Screw; 10mm length (for Case); Sunken Head                  |
-| -         | 2   | M3         | Screw; 6mm length (for power unit); Black                   |
-| -         | 1   | 6N-4       | Strain Relief                                               |
-| -         | 1   | Cable      | 4 or 5-wires (5 preferred); ~50cm length                    |
-| -         | 1   | DIN-5      | Connector                                                   |
-| -         | 1   | Zip-Tie    | To improve strain relief                                    |
-| -         | 1   | Fuse       | 1.5A 250V; 6x30mm Glass Fuse; Fast Blow                     |
-| -         | -   | Wire       | AWG 20 (or lower) for power connection                      |
+| Reference | Qty | Value      | Footprint                                                   | Source |
+| --------- | --- | ---------- | ----------------------------------------------------------- |-|
+| C1,C2     | 2   | 2200u      | Capacitor_THT:CP_Radial_D12.5mm_P5.00mm                     | [Mouser](https://www.mouser.com/ProductDetail/647-UVR1C222MHD1TO) |
+| D1        | 1   | B40C800G   | Diode_THT:Diode_Bridge_Round_D9.8mm                         | [Mouser](https://www.mouser.com/ProductDetail/625-B40C800G-E4) |
+| T1        | 1   |            | ST-6-16 (110V) or DST-6-16 (220V)                           | Mouser [ST](https://www.mouser.com/ProductDetail/530-ST-6-16) [DST](https://www.mouser.com/ProductDetail/530-DST-6-16) |
+| -         | 1   | Power Unit | With Fuse, Switch and C8 connector                          | [AliExpress](https://www.aliexpress.us/item/3256805889410008.html) |
+| -         | 1   | Case       | Top                                                         | [JLCPCB](https://jlc3dp.com/3d-printing-quote) |
+| -         | 1   | Case       | Bottom                                                      | [JLCPCB](https://jlc3dp.com/3d-printing-quote) |
+| -         | 2   | M3         | Screw; 40mm length or longer (for Transformer); Sunken Head | |
+| -         | 2   | M3         | Nut (for Transformer)                                       | |
+| -         | 4   | M3         | Screw; 10mm length (for Case); Sunken Head                  | |
+| -         | 2   | M3         | Screw; 6mm length (for power unit); Black                   | |
+| -         | 1   | 6N-4       | Strain Relief                                               | [AliExpress](https://www.aliexpress.us/item/3256804453313992.html) |
+| -         | 1   | Cable      | 4 or 5-wires (5 preferred); ~50cm length                    | |
+| -         | 1   | DIN-5      | Connector                                                   | |
+| -         | 1   | Zip-Tie    | To improve strain relief                                    | |
+| -         | 1   | Fuse       | 1.5A 250V; 6x30mm Glass Fuse; Fast Blow                     | |
+| -         | -   | Wire       | AWG 20 (or lower) for power connection                      | |
 
 ### Assembly
 
