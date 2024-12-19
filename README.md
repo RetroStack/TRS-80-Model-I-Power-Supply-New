@@ -7,6 +7,7 @@ This version supports both 120V and 230V.
 **NOTE**: A [previous power supply](https://github.com/RetroStack/TRS-80-Model-I-Power-Supply) was released by RetroStack. This new version replaces that power supply as it is cheaper to produce, lighter, and smaller.
 
 **WARNING**: This project involves high voltages that can cause severe injury, death, or property damage. Only proceed if you have the necessary experience and knowledge in handling high-voltage electronics.
+
 - **Safety First**: Always unplug the device and ensure it is fully discharged before beginning any work. Capacitors can store a significant amount of energy. Use insulated tools and wear appropriate safety gear, such as rubber gloves and safety glasses.
 - **Risk of Fire and Shock**: Incorrect wiring or assembly can lead to electric shock, fire, or malfunction. Double-check all connections, and if you're unsure, consult a qualified electrician or engineer. As this is a hobby device, never leave it connected without supervision.
 - **Use at Your Own Risk**: The creator of this project is not liable for any damage, injury, or harm caused by the misuse of these instructions. Proceed with extreme caution and at your own risk.
@@ -22,28 +23,33 @@ In the "Latest" folder, you'll find the most up-to-date design files, including:
 - Gerber files suitable for popular online PCB manufacturers like [PCBWay](/Latest/Gerber_PCBWay.zip) and [JLCPCB](/Latest/Gerber_JLCPCB.zip). Most manufacturers should be fine with either.
 - A Bill of Materials (BOM) in both [CSV](/Latest/BOM.csv) and [PDF](/Latest/BOM.pdf) formats. (Also, see the list below.)
 - The [full schematics](/Latest/Schematics.pdf).
-- 3D Objects of [Base](/Latest/3DPrint_Base.stl) and [Lid](/Latest/3DPrint_Lid.stl) for 3D printing.
+- 3D Objects (only need base and lid for full assembly):
+  - [Base](/Latest/3DPrint_Base.stl)
+  - Lid
+    - For resin printing: [Lid](/Latest/3DPrint_Lid.stl) and [Plain Lid](/Latest/3DPrint_Lid_Plain.stl)
+    - For FPM printing: [Lid](/Latest/3DPrint_Lid_FPM.stl) and [Plain Lid](/Latest/3DPrint_Lid_FPM_Plain.stl)
+  - Optional [Label](/Latest/3DPrint_Label.stl): Saves on printing suport with FPM or enables printing a badge for plain models
 
 ### Bill of Materials (BOM)
 
-| Reference | Qty | Value      | Footprint                                                   | Source |
-| --------- | --- | ---------- | ----------------------------------------------------------- |-|
-| C1,C2     | 2   | 2200u      | Capacitor_THT:CP_Radial_D12.5mm_P5.00mm                     | [Mouser](https://www.mouser.com/ProductDetail/647-UVR1C222MHD1TO) |
-| D1        | 1   | B40C800G   | Diode_THT:Diode_Bridge_Round_D9.8mm                         | [Mouser](https://www.mouser.com/ProductDetail/625-B40C800G-E4) |
+| Reference | Qty | Value      | Footprint                                                   | Source                                                                                                                 |
+| --------- | --- | ---------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| C1,C2     | 2   | 2200u      | Capacitor_THT:CP_Radial_D12.5mm_P5.00mm                     | [Mouser](https://www.mouser.com/ProductDetail/647-UVR1C222MHD1TO)                                                      |
+| D1        | 1   | B40C800G   | Diode_THT:Diode_Bridge_Round_D9.8mm                         | [Mouser](https://www.mouser.com/ProductDetail/625-B40C800G-E4)                                                         |
 | T1        | 1   |            | ST-6-16 (110V) or DST-6-16 (220V)                           | Mouser [ST](https://www.mouser.com/ProductDetail/530-ST-6-16) [DST](https://www.mouser.com/ProductDetail/530-DST-6-16) |
-| -         | 1   | Power Unit | With Fuse, Switch and C8 connector                          | [AliExpress](https://www.aliexpress.us/item/3256805889410008.html) |
-| -         | 1   | Case       | Top                                                         | [JLCPCB](https://jlc3dp.com/3d-printing-quote) |
-| -         | 1   | Case       | Bottom                                                      | [JLCPCB](https://jlc3dp.com/3d-printing-quote) |
-| -         | 2   | M3         | Screw; 40mm length or longer (for Transformer); Sunken Head | |
-| -         | 2   | M3         | Nut (for Transformer)                                       | |
-| -         | 4   | M3         | Screw; 10mm length (for Case); Sunken Head                  | |
-| -         | 2   | M3         | Screw; 6mm length (for power unit); Black                   | |
-| -         | 1   | 6N-4       | Strain Relief                                               | [AliExpress](https://www.aliexpress.us/item/3256804453313992.html) |
-| -         | 1   | Cable      | 4 or 5-wires (5 preferred); ~50cm length                    | |
-| -         | 1   | DIN-5      | Connector                                                   | |
-| -         | 1   | Zip-Tie    | To improve strain relief                                    | |
-| -         | 1   | Fuse       | 1.5A 250V; 6x30mm Glass Fuse; Fast Blow                     | |
-| -         | -   | Wire       | AWG 20 (or lower) for power connection                      | |
+| -         | 1   | Power Unit | With Fuse, Switch and C8 connector                          | [AliExpress](https://www.aliexpress.us/item/3256805889410008.html)                                                     |
+| -         | 1   | Case       | Top                                                         | [JLCPCB](https://jlc3dp.com/3d-printing-quote)                                                                         |
+| -         | 1   | Case       | Bottom                                                      | [JLCPCB](https://jlc3dp.com/3d-printing-quote)                                                                         |
+| -         | 2   | M3         | Screw; 40mm length or longer (for Transformer); Sunken Head |                                                                                                                        |
+| -         | 2   | M3         | Nut (for Transformer)                                       |                                                                                                                        |
+| -         | 4   | M3         | Screw; 10mm length (for Case); Sunken Head                  |                                                                                                                        |
+| -         | 2   | M3         | Screw; 6mm length (for power unit); Black                   |                                                                                                                        |
+| -         | 1   | 6N-4       | Strain Relief                                               | [AliExpress](https://www.aliexpress.us/item/3256804453313992.html)                                                     |
+| -         | 1   | Cable      | 4 or 5-wires (5 preferred); ~50cm length                    |                                                                                                                        |
+| -         | 1   | DIN-5      | Connector                                                   |                                                                                                                        |
+| -         | 1   | Zip-Tie    | To improve strain relief                                    |                                                                                                                        |
+| -         | 1   | Fuse       | 1.5A 250V; 6x30mm Glass Fuse; Fast Blow                     |                                                                                                                        |
+| -         | -   | Wire       | AWG 20 (or lower) for power connection                      |                                                                                                                        |
 
 ### Assembly
 
@@ -52,11 +58,12 @@ In the "Latest" folder, you'll find the most up-to-date design files, including:
 1.  3D print the case (lid and base) or order it from a manufacturer.
 2.  a. If 3D printed with PLA or similar material, use a soldering iron to set the knurled nuts. You can purchase a set of tools to simplify this, but a soldering iron is sufficient.
 
-    b. If 3D printed with resin, drill out a bit more space at all six locations and set the knurled nuts with super glue. Be careful not to cover the threads, as this will cause problems when screwing things in later. Wait until the glue is fully set before moving on.
+    b. If 3D printed with resin, set the knurled nuts with super glue or similar. Be careful not to cover the threads with glue, as this will cause problems when screwing things in later on. Wait until the glue is fully set before moving on.
 
 ![3D Case](/Images/3DPrint_Top.png)
 
 4. Paint the lettering on the top. I achieved good results using a foam brush or Q-tip. Optionally, apply a clear coat to protect the paint from wearing off.
+5. (Optional) If the label object is printed with a plain lid, simply glue the label on top of the lid.
 
 **Electronics**
 
@@ -98,6 +105,12 @@ The project has been implemented using KiCAD 8. The KiCAD project files are incl
 
 ![Front](/Images/3D_Front.png)
 ![Back](/Images/3D_Back.png)
+
+### 3D Objects
+
+The project includes various types of 3D objects for self-printing. It offers a set of bases and lids for resin prints, where the screw inserts must be glued in place, while the FPM version features slightly smaller holes designed for heat setting. Additionally, plain lids with separate label objects are provided, allowing the label and lid to be printed separately. This reduces the need for supports and enhances overall print quality.
+
+![PCB](/Images/3DPrint_Overview.png)
 
 ### RetroStack Libraries
 
